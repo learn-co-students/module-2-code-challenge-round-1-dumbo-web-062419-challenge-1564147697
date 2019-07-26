@@ -1,0 +1,4 @@
+<% @visits.each do |visit| %>
+<%= link_to visit.guest.name, guest_path(visit.guest) %><br>
+<%= link_to visit.episode.date, episode_path(visit.episode) %><br>
+<% end %>
