@@ -1,0 +1,12 @@
+<h1>Viewing guest info</h1>
+<%= link_to "Back", guests_path %>
+<hr>
+
+<p><strong>Guest name: </strong><%= @guest.name %></p>
+<p><strong>Occupation: </strong><%= @guest.occupation %></p>
+<p><strong>Episode appearances:</strong></p>
+<ul>
+  <% @guest.appearances.each do |app| %>
+    <li>Episode <%= app.episode_id %></li>
+  <% end %>
+</ul>
