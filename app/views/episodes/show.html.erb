@@ -1,0 +1,23 @@
+<h1>Episode #<%= @episode.number %></h1>
+
+<div>
+  Links:
+  <br>
+  <%= link_to "Guest Index", guests_path %>
+  <br>
+  <%= link_to "Episode Index", episodes_path %>
+  <br>
+  <%= link_to "New Appearance", new_appearance_path %>
+</div>
+
+<p>
+  Episode Date: <%= @episode.date %> <br>
+</p>
+
+<ul>
+  <% @episode.guests.each do |guest| %>
+  <li>
+    <%= guest.name %>
+  </li>
+  <% end %>
+</ul>
