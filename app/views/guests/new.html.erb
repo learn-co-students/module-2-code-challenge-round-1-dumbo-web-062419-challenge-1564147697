@@ -1,0 +1,21 @@
+<marquee BEHAVIOR=ALTERNATE><h1>New Guest</h1></marquee>
+
+<%= link_to "Back to All Guests", guests_path %>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |err| %>
+            <li>
+                <%= err %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @guest do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :occupation %><br>
+    <%= f.text_field :occupation %><br>
+    <%= f.submit %><br>
+<% end %>
