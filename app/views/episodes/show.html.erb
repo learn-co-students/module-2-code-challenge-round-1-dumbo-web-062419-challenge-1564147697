@@ -1,0 +1,18 @@
+<h1><%= @episode.date %><br> #
+<%= @episode.number %><br> </h1>
+<ul>
+
+
+<% @episode.guests.each do |guest| %>
+<li>
+<%= guest.name %>
+</li>
+<% end %>
+</ul>
+
+
+<%= button_to "Delete this episode", @episode, method:"delete" %>
+
+<%= link_to "Edit this Episode", edit_episode_path%>
+<%= link_to "Back to homepage", episodes_path %>
+<%= link_to "Create a new episode", new_episode_path %>
