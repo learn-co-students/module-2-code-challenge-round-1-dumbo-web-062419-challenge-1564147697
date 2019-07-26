@@ -1,0 +1,20 @@
+<h1>Welcome to <%= @guest.name%> Show Page </h1>
+
+<p>
+Full Name: <%= @guest.name %>
+</p>
+<p>
+Occupation: <%= @guest.occupation %>
+</p>
+
+#<h2> List Episode #</h2>
+#<ul>
+#<%= @guest.episodes do |episode| %>
+#<li>
+#<%= episode.number, episode %>
+#</li>
+#<%end%>
+#</ul>
+
+
+<%= link_to 'Return to the list of all Guests', guests_path %>

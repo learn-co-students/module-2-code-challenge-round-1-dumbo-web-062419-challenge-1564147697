@@ -25,3 +25,9 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+
+Log.create(name:"Ishmet's First Log", episode_id: 1, guest_id: 1)
+Log.create(name:"Ishmet's Second Log", episode_id: 1, guest_id: 6)
+Log.create(name:"Ishmet's Third Log", episode_id: 4, guest_id: 3)
+Log.create(name:"Jahan's First Log", episode_id: 3, guest_id: 4)
+Log.create(name:"Jahan's Second Log", episode_id: 5, guest_id: 9)

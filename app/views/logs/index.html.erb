@@ -1,0 +1,11 @@
+<h1>Welcome To Logs Index Page</h1>
+
+<ul>
+<% @logs.each do |log| %>
+<li>
+ <%= link_to log.name, log%>
+</li>
+<%end%>
+</ul>
+
+<h2><%= link_to 'Create a New log', new_log_path %></h2>

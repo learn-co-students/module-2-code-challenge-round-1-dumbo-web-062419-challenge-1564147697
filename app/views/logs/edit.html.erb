@@ -1,0 +1,15 @@
+
+<h1>Edit a New Log</h1>
+
+<%= form_for @logs do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :guest_id %>:
+  <%= f.collection_select :guest_id, Guest.all, :id, :name %><br />
+
+  <%= f.label :episode_id %>:
+  <%= f.collection_select :episode_id, Episode.all, :id, :name %><br />
+
+  <%= f.submit %>
+<% end %>
