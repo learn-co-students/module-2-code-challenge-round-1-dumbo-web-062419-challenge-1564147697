@@ -1,0 +1,10 @@
+<h1>Forms</h1>
+
+<%= form_for @guest do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :occupation %>
+<%= f.number_field :occupation %>
+<%= f.collection_select :guest_id, @guest, :id, :name %>
+<%= f.submit %>
+<% end %>
