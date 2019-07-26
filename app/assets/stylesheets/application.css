@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+/* ------------------------------------------------------------------------ */
+/* Went straight for the ugliest fonts */
+
+h1 {
+  font-size: 50px;
+  font-family: 'Papyrus';
+}
+
+li {
+  font-size: 14px;
+  font-family: 'Georgia';
+}
+
+div {
+  padding-right: 200px;
+  float: right;
+}

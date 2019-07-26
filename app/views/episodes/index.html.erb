@@ -1,7 +1,15 @@
 <h1>All Episodes</h1>
 
+<div>
+  Links:
+  <br>
+  <%= link_to "Guest Index", guests_path %>
+  <br>
+  <%= link_to "New Appearance", new_appearance_path %>
+</div>
+
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <li><%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode%></li>
   <% end %>
 </ul>
