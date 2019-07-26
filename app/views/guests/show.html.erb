@@ -1,0 +1,4 @@
+<h1>This is <%= @guest.name %></h1>
+
+<h1><%= @guest.occupation %></h1>
+<%= button_to "DELETE", guest_path(@guest), method: :delete %>

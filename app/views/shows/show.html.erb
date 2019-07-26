@@ -1,0 +1,7 @@
+<h1>This is <%= @show.guest_id %> <%= @show.episode_id %></h1>
+
+<% @guests.each do |g| %>
+  <% if g.id == @show.guest_id %><br>
+    <%= g.name %>
+  <% end %>
+<% end %>

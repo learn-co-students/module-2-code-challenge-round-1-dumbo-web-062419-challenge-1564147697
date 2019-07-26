@@ -1,0 +1,23 @@
+<h1>EPISODE SHOW PAGE</h1>
+
+Date: <%= @episode.date %><br>
+Episode # <%= @episode.number %>
+
+<br>
+<br>
+<% @episode.guests.each do |g| %>
+  <%= g.name%><br>
+<% end %>
+
+<br>
+<h3>Ratings of Guests in this Episode</h3>
+<br>
+
+<% @episode.shows.each do |s| %>
+rating <%= s.rating%><br>
+<% end %>
+
+<br>
+<%= button_to "DELETE", episode_path(@episode), method: :delete %>
+<br>
+<%= link_to "INVITE A NEW GUEST", new_show_path(@show) %>

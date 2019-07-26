@@ -1,0 +1,11 @@
+<h1>SHOW's INDEX</h1>
+
+
+<ul>
+  <% @shows.each do |s| %>
+    <li><%= link_to s.guest_id, s %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Create New Show", new_show_path(@show) %>
