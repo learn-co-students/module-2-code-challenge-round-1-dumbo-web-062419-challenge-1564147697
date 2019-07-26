@@ -1,0 +1,12 @@
+<p>Episodes: </p>
+<% @guest.episodes.each do |episode| %>
+<%= episode.date %>
+<%= episode.date %>
+<% end %>
+this is show - to show all appearances
+
+<% @episode.appearances.each do |appearance| %>
+<%= appearance.rating %>
+<%= appearance.guest_id %>
+<%= appearance.episode_id %>
+<% end %>
