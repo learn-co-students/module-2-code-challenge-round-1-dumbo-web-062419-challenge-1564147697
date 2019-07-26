@@ -1,0 +1,14 @@
+
+<h1 aling="center">Appearances</h1>
+
+<h2><%= link_to "log new appearance", new_appearance_path %></h2>
+
+<h3><%= link_to "Back to Guests", guests_path %></h3>
+
+  <% @appearances.each do |appearance| %>
+    <p><%= link_to appearance.guest.name, guest_path(appearance.guest) %>
+      for episode number <%= appearance.episode.number %>-
+      shot on: <%= link_to appearance.episode.date.strftime("%A, %b %d %Y"), episode_path(appearance.episode)%>
+      number of guest(s): <%= appearance.episode.guests.count %>
+    </p>
+  <% end %>
