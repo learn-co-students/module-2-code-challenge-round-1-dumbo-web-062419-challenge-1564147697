@@ -1,7 +1,11 @@
 <h1>All The Guests</h1>
+<%= form_tag(guests_path, method: :get) do %>
+  Name <%= text_field_tag :name %>
+  <%= submit_tag 'Search' %>
+  <% end %>
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to guest.name, guest %></li>
   <% end %>
 </ul>
