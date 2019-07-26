@@ -1,0 +1,9 @@
+<h1>Showing appearances</h1>
+<%= link_to "Add new", new_appearance_path %>
+
+<hr>
+<ul>
+<% @appearances.each do |app| %>
+  <li>Episode <%= app.episode.number %> had <%= app.guest.name %> and was rated <%= app.rating %></li>
+<% end %>
+</ul>

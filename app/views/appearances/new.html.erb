@@ -1,0 +1,13 @@
+<h1>Logging new appearance</h1>
+<%= link_to "Cancel", appearances_path %>
+<hr>
+
+<%= form_for @appearance do |f| %>
+  <p><%= f.label :episode_id %>
+  <%= f.collection_select :episode_id, @episodes, :id, :number %></p>
+
+  <p><%= f.label :guest_id %>
+    <%= f.collection_select :guest_id, @guests, :id, :name %></p>
+
+  <%= f.submit %>
+<% end %>

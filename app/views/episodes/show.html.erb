@@ -1,0 +1,12 @@
+<h1>Viewing episode info</h1>
+<%= link_to "Go back", episodes_path %>
+<hr>
+
+<p><strong>Episode number: </strong><%= @episode.number %></p>
+<p><strong>Episode airing date: </strong><%= @episode.date.strftime("%B %d, %Y") %></p>
+<p><strong>Episode guests:</strong></p>
+<ul>
+  <% @episode.guests.each do |guest| %>
+  <li><%= link_to guest.name, guest %></li>
+  <% end %>
+</ul>
