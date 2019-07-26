@@ -1,0 +1,17 @@
+<h1> This is the show page for episode number <%=@episode.number %>! </h1>
+
+<p> It aired on <%= @episode.date %>. </p>
+
+<% if @episode.appearances.length > 0 %>
+<p>It had the following guests: </p>
+<ol> 
+<% @episode.appearances.each do |appearance| %>
+  <li>  <%= link_to appearance.guest.name, appearance.guest %>, who had a rating of <%= appearance.rating %> for this episode.  </li>
+<% end %>
+<% else %>
+<p>This episode didn't have any guest appearances logged. </p>
+<%= link_to "Maybe do your job and add one here?", new_appearance_path %>
+
+<%end%>
+<br>
+<%= link_to "back to all the episodes", episodes_path %>
