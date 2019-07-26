@@ -1,0 +1,12 @@
+<h2>Show page</h2>
+<p>Guest name: <%= @guest.name %></p>
+<p>Occupation: <%= @guest.occupation %></p>
+<%= link_to "Edit", edit_guest_path %>
+
+h2>Show all appearances</h2>
+    <ul>
+      <% @guest.appearances.each do |appearance|%>
+          <li>
+            <%= @appearance.rating %>
+       <% end %>
+    </ul>

@@ -1,0 +1,14 @@
+<h1>Log a new appearance</h1>
+<% form_with model: @appearance do |appearance|  %>
+<p> <%= appearance.label :rating %> </p>
+<p> <%= appearance.text_field :rating %> </p>
+
+
+<%= appearance.label :guest_id %>
+<%= appearance.collection_select(:guest_id, Guest.all, :id, :name) %>
+
+<%= appearance.label :episode_id %>
+<%= appearance.collection_select(:episode_id, Episode.all, :id, :date) %>
+
+<%= appearance.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<h2>Log a guest</h2>
+<%= form_for @guest do |guest| %>
+<p><%= guest.label :name %></p>
+<p><%= guest.text_field :name %></p>
+<p><%= guest.label :occupation %></p>
+<p><%= guest.text_field :occupation %></p>
+<p><%= guest.submit %></p>
+<% end %>
