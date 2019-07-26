@@ -1,0 +1,9 @@
+<h1> All Appearances </h1>
+
+<%= link_to "Create a New Appearance", new_appearance_path %>
+
+<ul>
+<% @appearances.each do |app| %>
+<li>Name: <%= app.guest.name %> -- Date: <%= app.episode.date %> -- Rating: <%= app.rating %></li>
+<% end %>
+</ul>
