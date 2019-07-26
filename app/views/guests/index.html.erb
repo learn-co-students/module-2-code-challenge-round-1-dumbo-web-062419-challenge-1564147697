@@ -1,7 +1,13 @@
-<h1>All The Guests</h1>
+<marquee BEHAVIOR=ALTERNATE><h1>All The Guests</h1></marquee>
+
+<%= link_to "Create New Guest", new_guest_path %><br>
+<%= link_to "Create New Appearance", new_appearance_path %><br>
+<%= link_to "All Episodes", episodes_path %><br>
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li>
+    <%= link_to guest.name, guest_path(guest.id) %>
+    </li>
   <% end %>
 </ul>

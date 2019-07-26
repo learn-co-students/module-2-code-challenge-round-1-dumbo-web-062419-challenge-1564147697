@@ -1,7 +1,13 @@
-<h1>All Episodes</h1>
+<marquee BEHAVIOR=ALTERNATE class=><h1>All Episodes</h1></marquee>
+
+<%= link_to "Create New Episode", new_episode_path %><br>
+<%= link_to "Create New Appearance", new_appearance_path %><br>
+<%= link_to "All Guests", guests_path %><br>
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <p>
+      <%= link_to episode.number, episode_path(episode.id) %> - <%= link_to episode.date, episode_path(episode.id) %>
+    </p>
   <% end %>
 </ul>
