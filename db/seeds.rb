@@ -25,3 +25,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+
+50.times do
+  Appearance.create(guest_id: rand(1..90), episode_id: rand(1..40), rating: rand(1..5))
+end
