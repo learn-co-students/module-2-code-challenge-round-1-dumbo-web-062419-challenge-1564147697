@@ -1,0 +1,15 @@
+<h1>Episode #<%= @episode.number %></h1>
+<%= link_to "Back to all episodes", episodes_path %>
+<form action="/appearances/new" method="get">
+	<input type="hidden" name="episode" value="<%= @episode.id %>">
+	<input type="submit" value="Add a guest">
+</form>
+<% if @guests.length == 0%>
+	<p>Sorry! There are no guests for this episode!</p>
+<% else %>
+	<ul>
+		<% @guests.each do |g| %>
+			<li><%= g.name %></li>
+		<% end %>
+	</ul>
+<% end %>

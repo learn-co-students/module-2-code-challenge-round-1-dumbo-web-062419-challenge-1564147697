@@ -1,0 +1,21 @@
+<h1>Create a new Appearance of a guest on <%= @episode ? "Episode ##{@episode.number}" : "an episode" %> </h1>
+<% if flash[:errors] %>
+	<ul>
+	<% flash[:errors].each do |message| %>
+		<li><%= message %></li> 
+	<% end %>
+	</ul>
+<% end %>
+<%= form_for @appearance do |f| %>
+	<%= f.label :guest_id %>
+	<%= f.collection_select :guest_id, @guests, :id, :name %>
+	<% if @episode %>
+		<%= f.hidden_field :episode_id, :value => @episode.id %>
+	<%else%>
+		<%= f.label :episode_id %>
+		<%= f.collection_select :episode_id, @episodes, :id, :number %>
+	<% end %>
+	<%= f.label :rating %>
+	<%= f.number_field :rating %>
+	<%= f.submit %>
+<% end %>
