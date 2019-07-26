@@ -1,0 +1,16 @@
+<h1>Create a new visit here</h1>
+
+<%= form_for @visit do |f| %>
+
+  <%= f.label :name %>
+  <%= f.collection_select :guest_id, @guests, :id, :name %>
+
+  <%= f.label :number %>
+  <%= f.collection_select :episode_id, @episodes, :id, :number %>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+
+  <%= f.submit %>
+
+<% end %>

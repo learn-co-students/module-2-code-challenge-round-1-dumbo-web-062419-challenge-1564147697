@@ -2,6 +2,6 @@
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li> <%= button_to guest.name, guest_path(guest), method: :get %> </li>
   <% end %>
 </ul>

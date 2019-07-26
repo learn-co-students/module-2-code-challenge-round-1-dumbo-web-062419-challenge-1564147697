@@ -1,0 +1,10 @@
+<h1>All the visits</h1>
+
+<% @visits.each do |visit| %>
+  <p>
+    <%= visit.guest.name %>
+  </p>
+  <p>
+    <%= visit.episode.number %>
+  </p>
+<% end %>
