@@ -1,7 +1,9 @@
 <h1>All The Guests</h1>
 
+<h4><%= link_to "All of the Episodes", episodes_path %>
+
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to guest.name, guest %></li>
   <% end %>
 </ul>

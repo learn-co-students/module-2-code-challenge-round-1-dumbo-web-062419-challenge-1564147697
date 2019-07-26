@@ -1,0 +1,33 @@
+<h1><%= @guest.name %></h1>
+<h2><%= @guest.occupation %></h1>
+
+<%= link_to "All the Guests", guests_path %>
+
+<h3> Appearance </h3>
+
+<%= form_for @appearance do |f| %>
+
+    <%= f.hidden_field :guest_id, value: @guest.id %>
+
+    <%= f.label :episode_id %>
+    <%= f.collection_select(:episode_id, @episodes, :id, :number) %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <%= f.submit %>
+<% end %>
+
+<h2> All Appearances </h2>
+
+<ul>
+<% @guest.appearances.each do |app| %>
+
+    <li>
+       Episode: <%= link_to "#{app.episode.number}", episode_path(app.episode) %>
+    </li>
+
+    <li>
+        Rating: <%= app.rating %>
+    </li>
+
+<% end %>
+
